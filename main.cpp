@@ -8,4 +8,5 @@ int main()
     cout << "uy";
     cin >> icang;
     cout << "dani";
+    cout << "gem";
 }
