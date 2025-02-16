@@ -3,6 +3,9 @@ using namespace std;
 
 int main()
 {
-    cout<<"papai";
-    cout<<"uy";
+    int icang;
+    cout << "papai";
+    cout << "uy";
+    cin >> icang;
+    cout << "dani";
 }
