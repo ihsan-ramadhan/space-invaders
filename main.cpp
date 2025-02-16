@@ -7,4 +7,5 @@ int main()
     cout << "papai";
     cout << "uy";
     cin >> icang;
+    cout << "dani";
 }
