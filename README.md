@@ -43,23 +43,33 @@ Space Invaders adalah game di mana pemain mengendalikan pesawat luar angkasa dan
             a). Jika amunisi habis, pemain harus menunggu reload selesai sebelum bisa menembak lagi.
             b). Menampilkan teks “RELOADING...” di layar saat reload berlangsung.
 
-### Rahma Attaya Tamimah
-1. Terdapat dua jenis musuh dengan tampilan dan perilaku yang berbeda.
-2. Musuh dapat bergerak secara dinamis (naik-turun) untuk membuat pola serangan lebih sulit.
-3. Musuh juga dapat menembakkan peluru ke arah pemain.
-4. Jika peluru pemain mengenai musuh, musuh akan dihancurkan dan skor bertambah.
+### 3. Rahma Attaya Tamimah - Bertanggung jawab untuk merancang dan mengimplementasikan yang berkaitan dengan musuh, yaitu:
+    A. Struktur dan Atribut Musuh
+        a). Mendefinisikan 2 jenis musuh, yaitu Musuh Biasa (tipe 0) dengan HP rendah dan Musuh Kuat (tipe 1) dengan HP lebih tinggi. 
+        b). Menyimpan atribut HP, lebar, dan tinggi di dalam variabel global musuhAtribut.
+    B. Inisialisasi Musuh
+        a). Mengatur posisi awal setiap musuh secara acak, menetapkan kecepatan horizontal (dx) dalam rentang 2–3 piksel.
+        b). Mengatur tipe musuh kuat sesuai kebutuhan wave.
+    C. Pergerakan Musuh
+        Menggerakkan musuh dengan menambahkan nilai dx ke posisi X, lalu me-reset posisi musuh yang keluar layar ke sisi kanan yang belum terkena peluru.
+    D. Collision & Efek Tabrakan
+        Menangani tabrakan antara peluru dan musuh lalu menonaktifkan musuh serta peluru.
+    E. Tampilan Visual Musuh
+        a). Menggambar tubuh, mata, antena, tangan, dan tentakel.
+        b). Mmembedakan warna untuk musuh biasa dan kuat.
+        c). Menampilkan HP bar di atas musuh kuat untuk memperlihatkan sisa HP.
 
-### Gema Adzan F - Bertanggung jawab dalam pembuatan menu utama, background, dan game state.
-### A. Background
-Membuat background bintang agar ambience luar angkasa dari game Space Invaders terasa.
-### B. Menu Utama
-Menu utama dari game Space Invaders yang terdiri dari 4 tombol, yaitu:
-a). Play: Untuk memulai permainan.
-b). About: Untuk menampilkan profil Kelompok C3.
-c). Tutorial: Untuk menampilkan cara memainkan permainan.
-d). Quit: Untuk keluar dari game.
-### C. Game State
-Game state yang berguna untuk memungkinkan user berada di menu utama, dalam game, dan lainnya.
+### 4. Gema Adzan F - Bertanggung jawab dalam pembuatan menu utama, background, dan game state.
+    A. Background
+        Membuat background bintang agar ambience luar angkasa dari game Space Invaders terasa.
+    B. Menu Utama
+        Menu utama dari game Space Invaders yang terdiri dari 4 tombol, yaitu:
+        a). Play: Untuk memulai permainan.
+        b). About: Untuk menampilkan profil Kelompok C3.
+        c). Tutorial: Untuk menampilkan cara memainkan permainan.
+        d). Quit: Untuk keluar dari game.
+    C. Game State
+        Game state yang berguna untuk memungkinkan user berada di menu utama, dalam game, dan lainnya.
 
 ### 5. Fairuz Sheva Muhammad - Bertanggung jawab dalam pengembangan gameplay seperti wave dan pengurangan skor.
     A. Membuat Sistem Wave
@@ -68,3 +78,13 @@ Game state yang berguna untuk memungkinkan user berada di menu utama, dalam game
     B. Membuat Sistem Pengurangan Skor
         a). Ketika musuh melewati batas/pemain, maka hal tersebut akan menyebabkan pengurangan skor.
         b). Pengurangan skor dibagi menjadi dua, untuk musuh biasa dan musuh besar.
+
+### 2. Alda Pujama - Bertanggung jawab dalam pembuatan skor dan highskor, gameover, audio.
+    A. Skor
+        Game state yang berguna untuk memungkinkan user berada di menu utama, dalam game, dan lainnya (penjelasan skor dan mekanisme perhitungan poin).
+    B. Highskor
+        Game state yang berguna untuk memungkinkan user berada di menu utama, dalam game, dan lainnya (penyimpanan skor tertinggi dan penampilan high score).
+    C. Gameover
+        Game state yang berguna untuk memungkinkan user berada di menu utama, dalam game, dan lainnya (penanganan akhir permainan dan reset).
+    D. Audio dengan SDL_Mixer
+        Mengintegrasikan audio menggunakan SDL_Mixer sehingga game memberikan suara saat pemain menembak, musuh dihancurkan, atau terjadi game ove
